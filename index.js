@@ -20,10 +20,47 @@ module.exports = function(options) {
   });
 
   var templates = {
+    createEventEmail: nunjucksEnv.getTemplate("create_event.html"),
     welcomeEmail: nunjucksEnv.getTemplate("welcome.html")
   };
 
   return {
+    sendCreateEventEmail: function(options, callback) {
+      var html = templates.createEventEmail.render({
+        fullName: options.fullName
+      });
+
+      premailer.prepare({
+        html: html
+      }, function(err, email) {
+        if (err) {
+          return callback(err);
+        }
+
+        ses.sendEmail({
+          Source: "events@webmaker.org",
+          Destination: {
+            ToAddresses: [options.to],
+          },
+          Message: {
+            Subject: {
+              Data: "Next steps for your event",
+              Charset: "utf8"
+            },
+            Body: {
+              Text: {
+                Data: email.text,
+                Charset: "utf8"
+              },
+              Html: {
+                Data: email.html,
+                Charset: "utf8"
+              }
+            }
+          }
+        }, callback);
+      });
+    },
     sendWelcomeEmail: function(options, callback) {
       var html = templates.welcomeEmail.render({
         fullName: options.fullName
