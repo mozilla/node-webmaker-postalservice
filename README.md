@@ -1,4 +1,6 @@
 node-webmaker-postalservice
 ===========================
 
-Delivering handcrafted, artisanal emails to Webmakers everywhere 
+![Your friendly postman](assets/jbuckmail.png)
+
+Delivering handcrafted, artisanal emails to Webmakers everywhere
