@@ -42,9 +42,6 @@ module.exports = function(options) {
           Destination: {
             ToAddresses: [options.to],
           },
-          ReplyToAddresses: [
-            "amira@mozillafoundation.org"
-          ],
           Message: {
             Subject: {
               Data: "Next steps for your event",
@@ -77,13 +74,10 @@ module.exports = function(options) {
         }
 
         ses.sendEmail({
-          Source: "welcome@webmaker.org",
+          Source: "help@webmaker.org",
           Destination: {
             ToAddresses: [options.to],
           },
-          ReplyToAddresses: [
-            "jacob@mozillafoundation.org"
-          ],
           Message: {
             Subject: {
               Data: "Welcome to Webmaker!",
