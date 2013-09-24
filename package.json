@@ -21,6 +21,6 @@
   "dependencies": {
     "aws-sdk": "1.5.0",
     "nunjucks": "0.1.10",
-    "premailer-api": "1.0.1"
+    "premailer-api": "1.0.2"
   }
 }
