@@ -80,7 +80,7 @@ module.exports = function(options) {
           },
           Message: {
             Subject: {
-              Data: "Welcome to Webmaker!",
+              Data: "Welcome to Webmaker. Let's get you started.",
               Charset: "utf8"
             },
             Body: {
