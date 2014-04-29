@@ -142,7 +142,7 @@ module.exports = function(options) {
         ses.sendEmail({
           Source: "help@webmaker.org",
           Destination: {
-            ToAddresses: [options.user.email]
+            ToAddresses: [options.to]
           },
           Message: {
             Subject: {
