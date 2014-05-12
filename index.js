@@ -22,18 +22,16 @@ function isLanguageSupport(locale) {
   return i18n.getSupportLanguages().indexOf(locale) !== -1;
 };
 
-module.exports = function () {
+var templates = {};
 
-  var templates = {};
+// Add all templates from templates folder to nunjucks environment
+fs.readdirSync(__dirname + "/templates").forEach(function (file) {
+  var name = path.basename(file, ".js");
+  templates[name] = nunjucksEnv.getTemplate(file)
+});
 
-  // Add all templates from templates folder to nunjucks environment
-  fs.readdirSync(__dirname + "/templates").forEach(function (file) {
-    var name = path.basename(file, ".js");
-    templates[name] = nunjucksEnv.getTemplate(file)
-  });
-
-  // Render the email
-  return function renderEmail(options) {
+module.exports = {
+  render: function render(options) {
     options = options || {};
 
     var template = templates[options.template];
@@ -44,6 +42,6 @@ module.exports = function () {
     data.gettext = i18n.getStrings(locale);
 
     return template.render(data);
-  };
-
+  },
+  i18n: i18n
 };
