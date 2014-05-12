@@ -33,11 +33,13 @@ module.exports = function () {
   });
 
   // Render the email
-  return function renderEmail(templateName, data, locale) {
-    var template = templates[templateName];
-    locale = isLanguageSupport(locale) ? locale : "en-US";
+  return function renderEmail(options) {
+    options = options || {};
 
-    data = data || {};
+    var template = templates[options.template];
+    var locale = isLanguageSupport(options.locale) ? options.locale : "en-US";
+    var data = options.data || {};
+
     data.locale = locale;
     data.gettext = i18n.getStrings(locale);
 
