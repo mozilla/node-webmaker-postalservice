@@ -8,7 +8,7 @@
     "description": "Badges email"
   },
   "badges1": {
-    "message": "Congratulations! You earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }} badge</a>.  You can view it now on your {{ webmakerURL }} profile page.",
+    "message": "Congratulations! You earned the {{ badge.name }} badge ({{ webmakerURL }}/badges/{{ badge.slug }}).  You can view it now on your {{ webmakerURL }} profile page.",
     "description": "Badges email"
   },
   "badgesYourComments": {
