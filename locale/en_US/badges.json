@@ -1,6 +1,6 @@
 {
  "badgesViewBadge": {
-    "message": "You can view it now on your <a href=\"{{ webmakerURL }}/user/#!/{{ username }}/badges\">Webmaker profile page</a>.",
+    "message": "You can display, view and share this badge on your <a href=\"{{ webmakerURL }}/user/#!/{{ username }}/badges\">profile page</a>.",
     "description": "Link to badges page on profile"
   },
   "badgesSignUp": {
@@ -20,7 +20,7 @@
     "description": "Badges email"
   },
   "badgesYourComments": {
-    "message": "The mentor who issued your badge had some comments for you:",
+    "message": "The mentor who awarded this badge had some comments for you:",
     "description": "Badges email"
   },
   "badgesThanks": {
@@ -70,5 +70,53 @@
   "badgeAwardedSuperMentorSalulation": {
     "message": "Here's to a continued future of making and learning the web together,",
     "description": "Super mentor email salutation"
+  },
+  "badgesWhatsNext": {
+    "message": "What's next?",
+    "description": "Badges email" 
+  },
+  "badgesHappyContributing": {
+    "message": "Happy Contributing,",
+    "description": "Badges email" 
+  },
+  "badgesSpreadTheWord": {
+    "message": "Spread the word to your peers.",
+    "description": "Badges email" 
+  },
+  "badgesTweetThis": {
+    "message": "Tweet This",
+    "description": "Badges email" 
+  },
+  "badgesOtherBadges1": {
+    "message": "Check out some of our other brand spanking new badges",
+    "description": "Badges email" 
+  },
+  "badgesOtherBadges2": {
+    "message": "and pave your path to becoming a <a href=\"{{ webmakerURL }}/badges/webmaker-mentor\">Mentor</a> in the Webmaker community.",
+    "description": "Badges email" 
+  },
+  "eventHostBadge1": {
+    "message": "High Five! You’ve earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge, which recognizes your contributions to Maker Party and demonstrates that you have hosted an event to #TeachTheWeb.",
+    "description": "Event Host badge email"    
+  },
+  "eventHostTweetContents": {
+    "message": "I just got a badge for hosting a #MakerParty event! Join us and host your own party to #TeachTheWeb.",
+    "description": "Event Host badge email"    
+  },
+  "skillSharerBadge1": {
+    "message": "Congratulations! You’ve earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge, which recognizes you for sharing elements of your web literacy skills with someone else. ",
+    "description": "Skill Sharer badge email"    
+  },
+  "skillSharerTweetContents": {
+    "message": "I just got a badge because I #TeachTheWeb. Join me and share what you know about the web with others",
+    "description": "Skill Sharer badge email"    
+  },
+  "teachingKitBadge1": {
+    "message": "Way to go Webmaker! You’ve created a teaching kit and earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge. ",
+    "description": "Teaching Kit badge email"    
+  },
+  "teachingKitTweetContents": {
+    "message": "I just got a badge for making a resource to #TeachTheWeb. Remix or create your own teaching resource with @webmaker",
+    "description": "Teaching Kit badge email"    
   }
 }

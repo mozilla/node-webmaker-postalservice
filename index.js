@@ -44,7 +44,10 @@ module.exports = function(options) {
     mofoStaffEmail: nunjucksEnv.getTemplate("mofo_staff_new_event.html"),
     welcomeEmail: nunjucksEnv.getTemplate("welcome.html"),
     badgeAwarded: nunjucksEnv.getTemplate("badge_awarded.html"),
-    badgeAwardedSuperMentor: nunjucksEnv.getTemplate("badge_awarded_super_mentor.html")
+    badgeAwardedSuperMentor: nunjucksEnv.getTemplate("badge_awarded_super_mentor.html"),
+    eventHostBadgeAwarded: nunjucksEnv.getTemplate("event_host_badge_awarded.html"),
+    skillSharerBadgeAwarded: nunjucksEnv.getTemplate("skill_sharer_badge_awarded.html"),
+    teachingKitBadgeAwarded: nunjucksEnv.getTemplate("teaching_kit_badge_awarded.html"),
   };
 
   return {
@@ -95,14 +98,36 @@ module.exports = function(options) {
       var subject;
       var from;
 
-      if (options.badge.slug === 'webmaker-super-mentor') {
-        template = 'badgeAwardedSuperMentor';
-        subject = 'badgeAwardedSuperMentorSubject';
-        from = 'Michelle Thorne <help@webmaker.org>';
-      } else {
-        template = 'badgeAwarded';
-        subject = 'badgeAwardedSubject';
-        from = 'Webmaker <help@webmaker.org>';
+      switch (options.badge.slug) {
+        case 'webmaker-super-mentor':
+          template = 'badgeAwardedSuperMentor';
+          subject = 'badgeAwardedSuperMentorSubject';
+          from = 'Michelle Thorne <help@webmaker.org>';
+          break;
+
+        case 'skill-sharer':
+          template = 'skillSharerBadgeAwarded';
+          subject = 'badgeAwardedSubject';
+          from = 'Webmaker <help@webmaker.org>';
+          break;
+
+        case 'event-host':
+          template = 'eventHostBadgeAwarded';
+          subject = 'badgeAwardedSubject';
+          from = 'Webmaker <help@webmaker.org>';
+          break;
+
+        case 'teaching-kit-remixer':
+          template = 'teachingKitBadgeAwarded';
+          subject = 'badgeAwardedSubject';
+          from = 'Webmaker <help@webmaker.org>';
+          break;
+
+        default:
+          template = 'badgeAwarded';
+          subject = 'badgeAwardedSubject';
+          from = 'Webmaker <help@webmaker.org>';
+          break;
       }
 
       var html = templates[template].render({
