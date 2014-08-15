@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ gettext.badgesTitle | instantiate }}</title>
+    <style>
+      p, li {
+        font: 14px/16px "Helvetica Neue", Helvetica, sans-serif;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p>{{ gettext.teachingKitBadge1 | instantiate | safe }}</p>
+
+    {% if comment %}
+    <p>{{ gettext.badgesYourComments }}</p>
+    <blockquote>{{ comment }}</blockquote>
+    {% endif %}
+
+    {% if username %}
+    <p>{{ gettext.badgesViewBadge | instantiate | safe }}</p>
+    {% else %}
+    <p>{{ gettext.badgesSignUp | instantiate | safe }}</p>
+    {% endif %}
+
+    <h3>{{ gettext.badgesWhatsNext }}</h3>
+
+    <ol>
+      <li>
+        <p>{{ gettext.badgesSpreadTheWord }}</p>
+        <textarea rows=2 cols=50 disabled>{{ gettext.teachingKitTweetContents }}</textarea>
+        <div style="display:inline-block;vertical-align:60%;margin-left:10px">
+          <a style="background-image: linear-gradient(#FFF, #DEDEDE); background-color: #EEE; color: #333; text-decoration:none; border:1px solid #CCC; padding:9px 12px 8px 12px; text-align: center; box-sizing:border-box; box-shadow:0px 1px 0px rgba(255, 255, 255, 0.1) inset; border-radius:4px; text-shadow:0px 1px 0px rgba(255, 255, 255, 0.5); cursor:pointer; font-size:13px; font-weight:bold; line-height:26px; " href="http://twitter.com/intent/tweet?text={{ gettext.teachingKitTweetContents | replace("#","%23") }}" target="_blank">
+            {{ gettext.badgesTweetThis }}
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <p>{{ gettext.badgesOtherBadges1 }}</p>
+
+        <p><a href="https://webmaker.org/badges/skill-sharer">https://webmaker.org/badges/skill-sharer</a>
+        <br><a href="https://webmaker.org/badges/event-host">https://webmaker.org/badges/event-host</a></p>
+
+        <p>{{ gettext.badgesOtherBadges2 | instantiate | safe }}</p>
+      </li>
+    </ol>
+
+    <p>{{ gettext.badgesHappyContributing }}</p>
+
+    <p>The Webmaker Team</p>
+  </body>
+</html>
