@@ -47,7 +47,7 @@ module.exports = function(options) {
     badgeAwardedSuperMentor: nunjucksEnv.getTemplate("badge_awarded_super_mentor.html"),
     eventHostBadgeAwarded: nunjucksEnv.getTemplate("event_host_badge_awarded.html"),
     skillSharerBadgeAwarded: nunjucksEnv.getTemplate("skill_sharer_badge_awarded.html"),
-    teachingKitBadgeAwarded: nunjucksEnv.getTemplate("teaching_kit_badge_awarded.html"),
+    teachingKitBadgeAwarded: nunjucksEnv.getTemplate("teaching_kit_badge_awarded.html")
   };
 
   return {
