@@ -1,6 +1,6 @@
 {
  "badgesViewBadge": {
-    "message": "You can display, view and share this badge on your <a href=\"{{ webmakerURL }}/user/#!/{{ username }}/badges\">profile page</a>.",
+    "message": "You can display, view and share this badge on your <a href=\"{{ webmakerURL }}/user/{{ username }}/badges\">profile page</a>.",
     "description": "Link to badges page on profile"
   },
   "badgesSignUp": {
