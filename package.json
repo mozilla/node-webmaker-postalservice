@@ -1,6 +1,6 @@
 {
   "name": "webmaker-postalservice",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "Delivering handcrafted, artisanal emails to Webmakers everywhere",
   "main": "index.js",
   "scripts": {
