@@ -99,24 +99,36 @@
     "message": "High Five! You’ve earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge, which recognizes your contributions to Maker Party and demonstrates that you have hosted an event to #TeachTheWeb.",
     "description": "Event Host badge email"    
   },
-  "eventHostTweetContents": {
+  "eventHostTweetPreview": {
     "message": "I just got a badge for hosting a #MakerParty event! Join us and host your own party to #TeachTheWeb.",
+    "description": "Event Host badge email"    
+  },
+  "eventHostTweetContents": {
+    "message": "I just got a badge for hosting a #MakerParty event! Join us and host your own party to #TeachTheWeb. https://webmaker.org/en-US/getinvolved",
     "description": "Event Host badge email"    
   },
   "skillSharerBadge1": {
     "message": "Congratulations! You’ve earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge, which recognizes you for sharing elements of your web literacy skills with someone else. ",
     "description": "Skill Sharer badge email"    
   },
+  "skillSharerTweetPreview": {
+    "message": "I just got a badge because I #TeachTheWeb. Join me and share what you know about the web with others.",
+    "description": "Skill Sharer badge email"    
+  },
   "skillSharerTweetContents": {
-    "message": "I just got a badge because I #TeachTheWeb. Join me and share what you know about the web with others",
+    "message": "I just got a badge because I #TeachTheWeb. Join me and share what you know about the web with others. https://webmaker.org/en-US/getinvolved",
     "description": "Skill Sharer badge email"    
   },
   "teachingKitBadge1": {
     "message": "Way to go Webmaker! You’ve created a teaching kit and earned the <a href=\"{{ webmakerURL }}/badges/{{ badge.slug }}\">{{ badge.name }}</a> badge. ",
     "description": "Teaching Kit badge email"    
   },
+  "teachingKitTweetPreview": {
+    "message": "I just got a badge for making a resource to #TeachTheWeb. Remix or create your own teaching resource with @webmaker.",
+    "description": "Teaching Kit badge email"    
+  },
   "teachingKitTweetContents": {
-    "message": "I just got a badge for making a resource to #TeachTheWeb. Remix or create your own teaching resource with @webmaker",
+    "message": "I just got a badge for making a resource to #TeachTheWeb. Remix or create your own teaching resource with @webmaker. https://webmaker.org/en-US/getinvolved",
     "description": "Teaching Kit badge email"    
   }
 }
